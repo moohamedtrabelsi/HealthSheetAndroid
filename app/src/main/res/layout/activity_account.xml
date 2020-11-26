@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Acount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/re">
+
+
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:text="Account"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="194dp"
+                android:layout_height="610dp"
+                android:layout_marginTop="55dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:text="First Name :"
+                    android:textSize="24sp" />
+
+                <TextView
+
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="35dp"
+                    android:text="Last Name :"
+                    android:textSize="24sp" />
+
+                <TextView
+
+                    android:layout_width="138dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:text="E-mail :"
+                    android:textSize="24sp" />
+
+                <TextView
+
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:text="Phone :"
+                    android:textSize="24sp" />
+
+                <TextView
+
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Adress :"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="24sp" />
+
+                <TextView
+
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:text="Age :"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:text="Password :"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="216dp"
+                android:layout_height="609dp"
+                android:layout_marginTop="55dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textNom"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textPrenom"
+                    android:layout_width="139dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="35dp"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textE"
+                    android:layout_width="138dp"
+                    android:layout_height="33dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textPh"
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textA"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textD"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textP"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="55dp"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

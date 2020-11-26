@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <item android:id="@+id/Account"
+     android:icon="@drawable/ic_baseline_view_headline_24"
+     android:title="Account"
+     app:showAsAction="never"/>
+
+    <item android:id="@+id/About"
+        android:icon="@drawable/ic_baseline_face_24"
+        android:title="Abouts"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/Notifications"
+        android:icon="@drawable/ic_baseline_add_alert_24"
+        android:title="Notifications"
+        app:showAsAction="ifRoom"/>
+
+
+    <item android:id="@+id/Doctorslist"
+        android:icon="@drawable/ic_baseline_post_add_24"
+        android:title="Doctors list"
+        app:showAsAction="never"/>
+
+
+
+
+    <item android:id="@+id/DoctrsNear"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Doctors Near to me"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/Medicalsheet"
+        android:icon="@drawable/ic_baseline_receipt_24"
+        android:title="Medical sheet"
+        app:showAsAction="never"/>
+
+
+    <item android:id="@+id/Log-out"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="Log-out"
+        app:showAsAction="ifRoom"/>
+</menu>
