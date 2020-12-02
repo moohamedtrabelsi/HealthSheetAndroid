@@ -1,6 +1,7 @@
 package com.example.healthsheet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.icu.lang.UScript;
 import android.os.Bundle;
 
@@ -145,10 +146,14 @@ public class loginfrag extends Fragment {
                 if(response.isSuccessful()){
                     //User r = response.body();
                     System.out.println("res : "+response.body().toString());
-                    System.out.println("hh");
-                    System.out.println("hh");
-                    System.out.println("hh");
-                    System.out.println("hh");
+                   if(response.body().toString().contains("ok"))
+                   {
+                       Intent intent = new Intent(loginfrag.this.getContext(),Menu.class);
+                       startActivity(intent);
+                   }
+                   else {
+                       Toast.makeText(loginfrag.super.getContext(),"username is required",Toast.LENGTH_SHORT).show();
+                   }
                 }
             }
 
