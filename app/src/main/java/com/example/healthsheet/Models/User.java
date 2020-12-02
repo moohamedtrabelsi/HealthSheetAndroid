@@ -19,6 +19,9 @@ public class User {
         this.role = role;
     }
 
+    public User() {
+    }
+
     public ArrayList<User> getListdp() {
         return listdp;
     }
