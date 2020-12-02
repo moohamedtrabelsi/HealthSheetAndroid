@@ -28,4 +28,5 @@ public class DoctorsListActivity extends AppCompatActivity {
         adpterRecyler = new AdpterRecyler(this, users);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
          recyclerView.setAdapter(adpterRecyler);
+  }
 }
