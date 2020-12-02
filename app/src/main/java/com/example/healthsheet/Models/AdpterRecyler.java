@@ -60,6 +60,4 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
         return users .size();
     }
 
-
-
 }
