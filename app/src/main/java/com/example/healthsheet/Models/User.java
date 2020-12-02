@@ -1,20 +1,40 @@
 package com.example.healthsheet.Models;
 
+import java.util.ArrayList;
+
 public class User {
     String password;
     String username;
     String firstName;
     String lastName;
+    String email;
+    Role role;
+    ArrayList<User> listdp ;
 
-    public User() {
+    public Role getRole() {
+        return role;
     }
 
-    public User(String password, String username, String firstName, String lastName, String email) {
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public ArrayList<User> getListdp() {
+        return listdp;
+    }
+
+    public void setListdp(ArrayList<User> listdp) {
+        this.listdp = listdp;
+    }
+
+    public User(String password, String username, String firstName, String lastName, String email, Role role, ArrayList<User> listdp) {
         this.password = password;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.role = role;
+        this.listdp = listdp;
     }
 
     public String getFirstName() {
@@ -41,7 +61,7 @@ public class User {
         this.email = email;
     }
 
-    String email;
+
 
 
     public String getUsername() {

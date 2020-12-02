@@ -1,5 +1,6 @@
 package com.example.healthsheet;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -92,6 +93,10 @@ public class signupfrag extends Fragment {
 
                 validsignup( un, up,upp,uf,ul,ue);
                 doSignup(un, up,uf,ul,ue);
+
+                Intent intent = new Intent(signupfrag.this.getContext(),MainActivity.class);
+                startActivity(intent);
+
             }
         });
         return  v;

@@ -23,6 +23,10 @@ ConstraintLayout cl ;
         cl = findViewById(R.id.fragcont);
 
 
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragcont,new loginfrag())
+                .commit();
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
