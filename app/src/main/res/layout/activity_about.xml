@@ -5,7 +5,7 @@
     android:id="@+id/About"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/b"
+    android:background="@drawable/c"
     tools:context=".About">
 
     <TextView
@@ -25,7 +25,7 @@
 
     <TextView
         android:layout_width="288dp"
-        android:layout_height="206dp"
+        android:layout_height="218dp"
         android:text="Description"
         android:textAlignment="center"
         android:textColor="@color/design_default_color_background"
@@ -33,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.524" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
