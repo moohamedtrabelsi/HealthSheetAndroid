@@ -1,8 +1,10 @@
 package com.example.healthsheet.Models;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
-public class User {
+public class User extends RecyclerView.ViewHolder {
     String password;
     String username;
     String firstName;
