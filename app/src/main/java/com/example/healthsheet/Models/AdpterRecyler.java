@@ -24,6 +24,13 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
             FirstName = (TextView)itemView.findViewById(R.id.FirstName);
             LastName = (TextView)itemView.findViewById(R.id.LastName);
         }
+
+        public void updateholder(User u)
+        {
+            FirstName.setText(u.getFirstName());
+            LastName.setText(u.getLastName());
+        }
+
     }
 
     private final ArrayList<User> users;
@@ -33,9 +40,10 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
         this.mContext = mContext ;
         this.users = users;
     }
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
-        View mItemView = LayoutInflater.from(mContext).inflate(R.layout.activity_doctors_list, parent, false);
+    public ViewHolder onCreateViewHolder( @NonNull ViewGroup parent, int viewType) {
+        View mItemView = LayoutInflater.from(mContext).inflate(R.layout.doctor, parent, false);
 
         return new ViewHolder(mItemView, this);
     }
@@ -43,8 +51,8 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
       User u = users.get(position);
-      holder.FirstName.setText(u.firstName);
-      holder .LastName.setText(u.lastName);
+      holder.FirstName.setText(u.firstname);
+      holder .LastName.setText(u.lastname);
     }
 
     @Override

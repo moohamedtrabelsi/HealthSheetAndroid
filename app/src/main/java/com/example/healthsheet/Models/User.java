@@ -1,20 +1,29 @@
 package com.example.healthsheet.Models;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
-public class User extends RecyclerView.ViewHolder {
+public class User  {
+
+
+    public static User usercur = new User();
+
     String password;
     String username;
-    String firstName;
-    String lastName;
+    String firstname;
+    String lastname;
     String email;
     Role role;
-    ArrayList<User> listdp ;
+    ArrayList<User> relations ;
+    ArrayList<String> listdp;
+
 
     public Role getRole() {
         return role;
+    }
+
+    public User(String firstName, String lastName) {
+        this.firstname = firstName;
+        this.lastname = lastName;
     }
 
     public void setRole(Role role) {
@@ -24,38 +33,56 @@ public class User extends RecyclerView.ViewHolder {
     public User() {
     }
 
-    public ArrayList<User> getListdp() {
+
+    public User(String username, String firstName, String lastName, String email, ArrayList<String> listdp) {
+        this.username = username;
+        this.firstname = firstName;
+        this.lastname = lastName;
+        this.email = email;
+        this.listdp = listdp;
+    }
+
+    public ArrayList<User> getRelations() {
+        return relations;
+    }
+
+    public void setRelations(ArrayList<User> relations) {
+        this.relations = relations;
+    }
+
+    public ArrayList<String> getListdp() {
         return listdp;
     }
 
-    public void setListdp(ArrayList<User> listdp) {
+    public void setListdp(ArrayList<String> listdp) {
         this.listdp = listdp;
     }
 
     public User(String password, String username, String firstName, String lastName, String email, Role role, ArrayList<User> listdp) {
+
         this.password = password;
         this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstName;
+        this.lastname = lastName;
         this.email = email;
         this.role = role;
-        this.listdp = listdp;
+        this.relations = listdp;
     }
 
     public String getFirstName() {
-        return firstName;
+        return firstname;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstname = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return lastname;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastname = lastName;
     }
 
     public String getEmail() {

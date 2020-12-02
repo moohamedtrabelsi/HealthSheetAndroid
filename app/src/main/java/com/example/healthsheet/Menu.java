@@ -21,7 +21,7 @@ public class Menu extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id =item.getItemId();
         if(id == R.id.Account){
-            Intent intent = new Intent(Menu.this,Account.class);
+            Intent intent = new Intent(Menu.this,Account1.class);
             startActivity(intent);
             return true ;
 
@@ -35,7 +35,7 @@ public class Menu extends AppCompatActivity {
         }
         else
         if(id == R.id.Doctorslist){
-            Intent intent = new Intent(Menu.this,DoctorsListActivity.class);
+            Intent intent = new Intent(Menu.this,doctorsList.class);
             startActivity(intent);
             return true ;
 

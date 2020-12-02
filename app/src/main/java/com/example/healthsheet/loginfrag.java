@@ -21,6 +21,7 @@ import com.example.healthsheet.Api.Responseobj;
 import com.example.healthsheet.Models.User;
 import com.example.healthsheet.Services.UserServices;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -46,7 +47,8 @@ public class loginfrag extends Fragment {
     Button logbut ;
     UserServices us;
 
-
+    private Gson gson;
+    private GsonBuilder gsonBuilder;
 
 
     /**
@@ -72,9 +74,9 @@ public class loginfrag extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-    public void toastshow(String s, Context c)
+    public void toastshow(String s)
     {
-        Toast t = Toast.makeText(c,s,Toast.LENGTH_SHORT);
+        Toast t = Toast.makeText(this.getContext(),s,Toast.LENGTH_SHORT);
         t.show();
     }
 
@@ -96,6 +98,8 @@ public class loginfrag extends Fragment {
 
                 if(validlogin(usernam,userpas)){
                   dologin(usernam,userpas);
+
+
                   /* User u = new User();
                     u.setUsername(usernam);
                     u.setPassword(userpas);
@@ -132,11 +136,15 @@ public class loginfrag extends Fragment {
         u.setUsername(un);
         u.setPassword(up);
 
+        gsonBuilder = new GsonBuilder();
+        gson = gsonBuilder.create();
+
+
         Gson g = new Gson();
         String j = g.toJson(u);
-        String js = '{'+"username"+':'+"x"+','+
+        //String js = '{'+"username"+':'+"x"+','+
 
-                "password"+':'+"x"+'}' ;
+                //"password"+':'+"x"+'}' ;
         JsonParser jp = new JsonParser();
         JsonObject jo = (JsonObject) jp.parse(j);
         Call<JsonObject> call = us.login(jo);
@@ -145,14 +153,19 @@ public class loginfrag extends Fragment {
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
                 if(response.isSuccessful()){
                     //User r = response.body();
-                    System.out.println("res : "+response.body().toString());
-                   if(response.body().toString().contains("ok"))
+                    //System.out.println("res : "+response.body().toString());
+                   if(response.body().toString().contains("Not"))
                    {
-                       Intent intent = new Intent(loginfrag.this.getContext(),Menu.class);
-                       startActivity(intent);
+                     //  Toast.makeText(;,"invalide username or password ",Toast.LENGTH_SHORT).show();
+                       toastshow("invalide username or password");
+
                    }
                    else {
-                       Toast.makeText(loginfrag.super.getContext(),"username is required",Toast.LENGTH_SHORT).show();
+                       User.usercur = gson.fromJson(response.body().toString(),User.class);
+                       System.out.println("hjbsl"+User.usercur.getUsername());
+
+                       Intent intent = new Intent(loginfrag.this.getContext(),Menu.class);
+                       startActivity(intent);
                    }
                 }
             }
@@ -162,11 +175,6 @@ public class loginfrag extends Fragment {
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
 
-                System.out.println("nn");
-                System.out.println("nn");
-                System.out.println("nn");
-                System.out.println("nn");
-                System.out.println("nn");
 
 
             }

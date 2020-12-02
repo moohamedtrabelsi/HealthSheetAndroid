@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Acount"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/rrr">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/Acount"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/rrr"
+tools:context=".Account1">
 
 
-    <TextView
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:text="Account"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_background"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+<TextView
+    android:layout_width="380dp"
+    android:layout_height="53dp"
+    android:text="Account"
+    android:textAlignment="center"
+    android:textColor="@color/design_default_color_background"
+    android:textSize="36sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="MissingConstraints" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="410dp"
+        android:layout_height="663dp"
+        android:layout_marginBottom="68dp"
+        app:layout_constraintBottom_toBottomOf="@+id/AccountUpdate"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -32,8 +36,8 @@
             tools:ignore="MissingConstraints">
 
             <LinearLayout
-                android:layout_width="194dp"
-                android:layout_height="618dp"
+                android:layout_width="199dp"
+                android:layout_height="608dp"
                 android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
@@ -112,15 +116,15 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="216dp"
-                android:layout_height="621dp"
+                android:layout_width="211dp"
+                android:layout_height="608dp"
                 android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
                 <EditText
                     android:id="@+id/AccounttextNom"
-                    android:layout_width="140dp"
-                    android:layout_height="38dp"
+                    android:layout_width="158dp"
+                    android:layout_height="34dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="45dp"
 
@@ -128,9 +132,9 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textPrenom"
-                    android:layout_width="142dp"
-                    android:layout_height="32dp"
+                    android:id="@+id/AccounttextPrenom"
+                    android:layout_width="158dp"
+                    android:layout_height="38dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="30dp"
 
@@ -138,9 +142,9 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textE"
+                    android:id="@+id/AccounttextE"
                     android:layout_width="138dp"
-                    android:layout_height="33dp"
+                    android:layout_height="35dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="50dp"
 
@@ -148,9 +152,9 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textPh"
+                    android:id="@+id/AccounttextPh"
                     android:layout_width="132dp"
-                    android:layout_height="37dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="55dp"
 
@@ -158,9 +162,9 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textA"
+                    android:id="@+id/AccounttextA"
                     android:layout_width="122dp"
-                    android:layout_height="39dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="60dp"
 
@@ -168,9 +172,9 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textD"
+                    android:id="@+id/AccounttextD"
                     android:layout_width="130dp"
-                    android:layout_height="39dp"
+                    android:layout_height="30dp"
 
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="60dp"
@@ -178,16 +182,30 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textP"
+                    android:id="@+id/AccounttextP"
                     android:layout_width="132dp"
-                    android:layout_height="39dp"
+                    android:layout_height="30dp"
 
                     android:layout_marginLeft="25dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginTop="30dp"
                     android:textColor="@color/design_default_color_background"
                     android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/AccountUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Update"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
