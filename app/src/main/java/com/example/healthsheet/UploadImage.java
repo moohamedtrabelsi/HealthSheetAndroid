@@ -12,6 +12,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.FileUtils;
@@ -27,6 +28,7 @@ import com.example.healthsheet.Api.ApiClient;
 import com.example.healthsheet.Api.ApiUtils;
 import com.example.healthsheet.Services.ImagesServices;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.dialog.MaterialDialogs;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -34,6 +36,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.URI;
 import java.util.Map;
 
 import okhttp3.MediaType;
@@ -51,7 +54,7 @@ public class UploadImage extends AppCompatActivity {
     Button Upload_Btn;
 
     private String Document_img1="" ;
-
+    String u = "http://192.168.1.102:3000/api/image/1607333808489-HealthSheet-file.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,7 @@ public class UploadImage extends AppCompatActivity {
         setContentView(R.layout.activity_upload_image);
 
         IDProf=(ImageView)findViewById(R.id.IdProf);
+        //IDProf.setImageURI(u);
         Upload_Btn=(Button)findViewById(R.id.UploadBtn);
 
         IDProf.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +91,9 @@ public class UploadImage extends AppCompatActivity {
                     File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                     startActivityForResult(intent, 1);
+
+
+
                 }
                 else if (options[item].equals("Choose from Gallery"))
                 {
@@ -100,6 +107,8 @@ public class UploadImage extends AppCompatActivity {
         });
         builder.show();
     }
+
+
 
 
 
@@ -135,14 +144,15 @@ public class UploadImage extends AppCompatActivity {
 
 
 
-    /*private void uploadFile(Uri fileUri) {
+    private void uploadFile(Uri fileUri) {
         // create upload service client
         ImagesServices service =
                 ApiUtils.getImagesServices();
 
         // https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
         // use the FileUtils to get the actual file by uri
-      //  File file = FileUtils.getFile(this, fileUri);
+
+        File file = new File(u);
 
         // create RequestBody instance from file
         RequestBody requestFile =
@@ -162,7 +172,7 @@ public class UploadImage extends AppCompatActivity {
                         okhttp3.MultipartBody.FORM, descriptionString);*/
 
         // finally, execute the request
-     /*   Call<ResponseBody> call = service.upload( body);
+       Call<ResponseBody> call = service.upload( body);
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call,
@@ -175,7 +185,7 @@ public class UploadImage extends AppCompatActivity {
                 Log.e("Upload error:", t.getMessage());
             }
         });
-    }*/
+    }
 
 
 
