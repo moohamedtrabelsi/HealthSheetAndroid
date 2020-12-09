@@ -45,12 +45,12 @@ public class Account1 extends AppCompatActivity {
         email = findViewById(R.id.AccounttextE);
         update = findViewById(R.id.AccountUpdate);
         us = ApiUtils.getUserServices();
-        //fname.setText(u.getFirstName());
-        fname.setText("hama");
-        //email.setText(u.getEmail());
-        email.setText("hama");
-        //lname.setText(u.getLastName());
-        lname.setText("hama");
+        fname.setText(u.getFirstName());
+       // fname.setText("hama");
+        email.setText(u.getEmail());
+      //  email.setText("hama");
+        lname.setText(u.getLastName());
+       // lname.setText("hama");
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override

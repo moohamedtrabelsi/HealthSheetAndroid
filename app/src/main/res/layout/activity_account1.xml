@@ -6,14 +6,17 @@
     android:id="@+id/Acount"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/b">
+    android:background="@drawable/b"
+    tools:context=".Account1"
+    >
 
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="400dp"
+        android:layout_height="626dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -25,6 +28,7 @@
             <LinearLayout
                 android:layout_width="194dp"
                 android:layout_height="728dp"
+
                 android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
@@ -119,7 +123,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textPrenom"
+                    android:id="@+id/AccounttextPrenom"
                     android:layout_width="146dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -129,7 +133,8 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textE"
+
+                    android:id="@+id/AccounttextE"
                     android:layout_width="139dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -139,7 +144,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textPh"
+                    android:id="@+id/AccounttextPh"
                     android:layout_width="138dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -149,7 +154,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textA"
+                    android:id="@+id/AccounttextA"
                     android:layout_width="136dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -159,8 +164,8 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textD"
-                    android:layout_width="147dp"
+                    android:id="@+id/AccounttextD"
+                    android:layout_width="143dp"
                     android:layout_height="wrap_content"
 
                     android:layout_marginLeft="25dp"
@@ -169,7 +174,8 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textP"
+
+                    android:id="@+id/AccounttextP"
                     android:layout_width="147dp"
                     android:layout_height="wrap_content"
 
@@ -181,16 +187,16 @@
         </LinearLayout>
     </ScrollView>
 
-    <TextView
-        android:layout_width="380dp"
-        android:layout_height="53dp"
-        android:text="Account"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_background"
-        android:textSize="36sp"
+    <Button
+        android:id="@+id/AccountUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Update"
+        android:textColor="#FAF6F6"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

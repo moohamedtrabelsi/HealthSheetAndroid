@@ -118,7 +118,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textPrenom"
+                    android:id="@+id/AccounttextPrenom"
                     android:layout_width="146dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -128,7 +128,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textE"
+                    android:id="@+id/AccounttextE"
                     android:layout_width="139dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -138,7 +138,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textPh"
+                    android:id="@+id/AccounttextPh"
                     android:layout_width="138dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -148,7 +148,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textA"
+                    android:id="@+id/AccounttextA"
                     android:layout_width="136dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
@@ -158,7 +158,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textD"
+                    android:id="@+id/AccounttextD"
                     android:layout_width="143dp"
                     android:layout_height="wrap_content"
 
@@ -168,7 +168,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/textP"
+                    android:id="@+id/AccounttextP"
                     android:layout_width="147dp"
                     android:layout_height="wrap_content"
 
