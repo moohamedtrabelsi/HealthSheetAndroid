@@ -1,6 +1,7 @@
 package com.example.healthsheet.Api;
 
 import com.example.healthsheet.Services.ImagesServices;
+import com.example.healthsheet.Services.MedicalSheetServices;
 import com.example.healthsheet.Services.UserServices;
 
 import retrofit2.Retrofit;
@@ -15,5 +16,9 @@ public class ApiUtils {
     public static ImagesServices getImagesServices(){
 
         return ApiClient.getRetrofit().create(ImagesServices.class);
+    }
+    public static MedicalSheetServices getMedSheetServices(){
+
+        return ApiClient.getRetrofit().create(MedicalSheetServices.class);
     }
 }

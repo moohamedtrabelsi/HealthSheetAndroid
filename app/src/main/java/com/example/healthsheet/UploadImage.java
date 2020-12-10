@@ -65,6 +65,13 @@ public class UploadImage extends AppCompatActivity {
         //IDProf.setImageURI(u);
         Upload_Btn=(Button)findViewById(R.id.UploadBtn);
 
+        Upload_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                uploadFile(new Uri.Builder().query(u).build());
+            }
+        });
+
         IDProf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
