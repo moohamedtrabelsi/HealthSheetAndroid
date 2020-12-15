@@ -98,9 +98,6 @@ public class UploadImage extends AppCompatActivity {
                     File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
                     startActivityForResult(intent, 1);
-
-
-
                 }
                 else if (options[item].equals("Choose from Gallery"))
                 {

@@ -30,7 +30,5 @@ static List<Ordonnance>lv = new ArrayList<>();
 
         VisiteAdapter c = new VisiteAdapter(lv);
         r.setAdapter(c);
-
-
     }
 }
