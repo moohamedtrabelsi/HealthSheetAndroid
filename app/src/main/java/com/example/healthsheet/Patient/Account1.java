@@ -1,4 +1,4 @@
-package com.example.healthsheet;
+package com.example.healthsheet.Patient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.example.healthsheet.Api.ApiUtils;
 import com.example.healthsheet.Models.User;
+import com.example.healthsheet.R;
 import com.example.healthsheet.Services.UserServices;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -46,11 +47,11 @@ public class Account1 extends AppCompatActivity {
         update = findViewById(R.id.AccountUpdate);
         us = ApiUtils.getUserServices();
         fname.setText(u.getFirstName());
-       // fname.setText("hama");
+
         email.setText(u.getEmail());
-      //  email.setText("hama");
+
         lname.setText(u.getLastName());
-       // lname.setText("hama");
+
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override

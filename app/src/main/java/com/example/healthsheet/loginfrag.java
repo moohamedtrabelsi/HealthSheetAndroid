@@ -1,13 +1,10 @@
 package com.example.healthsheet;
 
-import android.content.Context;
 import android.content.Intent;
-import android.icu.lang.UScript;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 //192.168.0.123
-import android.text.TextPaint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.healthsheet.Api.ApiClient;
 import com.example.healthsheet.Api.ApiUtils;
-import com.example.healthsheet.Api.Responseobj;
 import com.example.healthsheet.Models.User;
+import com.example.healthsheet.Patient.Menu;
 import com.example.healthsheet.Services.UserServices;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -164,7 +160,7 @@ public class loginfrag extends Fragment {
                        User.usercur = gson.fromJson(response.body().toString(),User.class);
                        System.out.println("hjbsl"+User.usercur.getUsername());
 
-                       Intent intent = new Intent(loginfrag.this.getContext(),Menu.class);
+                       Intent intent = new Intent(loginfrag.this.getContext(), Menu.class);
                        startActivity(intent);
                    }
                 }

@@ -1,13 +1,14 @@
-package com.example.healthsheet;
+package com.example.healthsheet.Patient;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
+
+import com.example.healthsheet.About;
+import com.example.healthsheet.R;
 
 public class Menu extends AppCompatActivity {
 
@@ -21,21 +22,21 @@ public class Menu extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id =item.getItemId();
         if(id == R.id.Account){
-            Intent intent = new Intent(Menu.this,Account1.class);
+            Intent intent = new Intent(Menu.this, Account1.class);
             startActivity(intent);
             return true ;
 
         }
         else
         if(id == R.id.About){
-            Intent intent = new Intent(Menu.this,About.class);
+            Intent intent = new Intent(Menu.this, About.class);
             startActivity(intent);
             return true ;
 
         }
         else
         if(id == R.id.Doctorslist){
-            Intent intent = new Intent(Menu.this,doctorsList.class);
+            Intent intent = new Intent(Menu.this, doctorsList.class);
             startActivity(intent);
             return true ;
 

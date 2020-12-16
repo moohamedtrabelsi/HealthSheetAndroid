@@ -1,8 +1,10 @@
-package com.example.healthsheet;
+package com.example.healthsheet.Doctor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.healthsheet.R;
 
 public class AboutPatient extends AppCompatActivity {
 

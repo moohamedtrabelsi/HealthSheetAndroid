@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.healthsheet">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +12,6 @@
     <uses-feature
         android:name="android.hardware.Camera"
         android:required="true" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,15 +19,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutPatient"></activity>
-        <activity android:name=".AboutDoc" />
+        <activity android:name=".Doctor.AboutPatient"></activity>
+        <activity android:name=".Patient.AboutDoc" />
         <activity android:name=".CreerOrdonnance" />
         <activity android:name=".Ordonnance" />
         <activity android:name=".MedicalSheet" />
+
         <activity android:name=".UploadImage" />
-        <activity android:name=".Account1" />
-        <activity android:name=".doctorsList" />
-        <activity android:name=".Menu" />
+        <activity android:name=".Patient.Account1" />
+        <activity android:name=".Patient.doctorsList">
+        </activity>
+        <activity android:name=".Patient.Menu" />
+
         <activity android:name=".AcceuilD" />
         <activity android:name=".test" />
         <activity android:name=".MainActivity">

@@ -1,4 +1,4 @@
-package com.example.healthsheet;
+package com.example.healthsheet.Patient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.example.healthsheet.Models.AdpterRecyler;
 import com.example.healthsheet.Models.User;
+import com.example.healthsheet.R;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,7 @@ public class doctorsList extends AppCompatActivity {
         users = new ArrayList<>();
 
         for(int i= 0 ; i < 10 ; i++){
-            users.add(new User("hama","hama"));
+            users.add(new User("khenine","oumayma"));
         }
         adpterRecyler = new AdpterRecyler(this, users);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
