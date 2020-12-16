@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
+import com.example.healthsheet.Adapter.VisiteAdapter;
 import com.example.healthsheet.Models.Ordonnance;
 
 import java.util.ArrayList;
