@@ -7,8 +7,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.Camera"
-        android:required="true"></uses-feature>
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -17,29 +19,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreerOrdonnance"></activity>
-        <activity android:name=".Ordonnance" >
-
-
-        </activity>>
+        <activity android:name=".AboutPatient"></activity>
+        <activity android:name=".AboutDoc" />
+        <activity android:name=".CreerOrdonnance" />
+        <activity android:name=".Ordonnance" />
         <activity android:name=".MedicalSheet" />
-        <activity android:name=".UploadImage">
-
-
-        </activity>
+        <activity android:name=".UploadImage" />
         <activity android:name=".Account1" />
         <activity android:name=".doctorsList" />
         <activity android:name=".Menu" />
         <activity android:name=".AcceuilD" />
         <activity android:name=".test" />
-        <activity android:name=".MainActivity" >
-
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
