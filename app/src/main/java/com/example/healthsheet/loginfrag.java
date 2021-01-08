@@ -1,10 +1,13 @@
 package com.example.healthsheet;
 
+import android.content.Context;
 import android.content.Intent;
+import android.icu.lang.UScript;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 //192.168.0.123
+import android.text.TextPaint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.healthsheet.Api.ApiClient;
 import com.example.healthsheet.Api.ApiUtils;
+import com.example.healthsheet.Api.Responseobj;
 import com.example.healthsheet.Models.User;
 import com.example.healthsheet.Patient.Menu;
 import com.example.healthsheet.Services.UserServices;
@@ -45,6 +50,7 @@ public class loginfrag extends Fragment {
 
     private Gson gson;
     private GsonBuilder gsonBuilder;
+    Context c ;
 
 
     /**
@@ -72,7 +78,7 @@ public class loginfrag extends Fragment {
     }
     public void toastshow(String s)
     {
-        Toast t = Toast.makeText(this.getContext(),s,Toast.LENGTH_SHORT);
+        Toast t = Toast.makeText(c,s,Toast.LENGTH_SHORT);
         t.show();
     }
 
@@ -85,6 +91,7 @@ public class loginfrag extends Fragment {
         passwor = v.findViewById(R.id.logpassword);
         logbut = v.findViewById(R.id.loglogin);
         us= ApiUtils.getUserServices();
+        c = this.getContext();
 
         logbut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +100,7 @@ public class loginfrag extends Fragment {
                 String userpas = passwor.getText().toString();
 
                 if(validlogin(usernam,userpas)){
-                  dologin(usernam,userpas);
+                    dologin(usernam,userpas);
 
 
                   /* User u = new User();
@@ -116,10 +123,10 @@ public class loginfrag extends Fragment {
     }
     private boolean validlogin(String un , String up)
     {
-    if(un==null || un.trim().length()==0 ){
-        Toast.makeText(this.getContext(),"usernameisrequired",Toast.LENGTH_SHORT).show();
-    return false;
-    }
+        if(un==null || un.trim().length()==0 ){
+            Toast.makeText(this.getContext(),"usernameisrequired",Toast.LENGTH_SHORT).show();
+            return false;
+        }
         if(up==null || up.trim().length()==0 ){
             Toast.makeText(this.getContext(),"passwordisrequired",Toast.LENGTH_SHORT).show();
             return false;
@@ -140,7 +147,7 @@ public class loginfrag extends Fragment {
         String j = g.toJson(u);
         //String js = '{'+"username"+':'+"x"+','+
 
-                //"password"+':'+"x"+'}' ;
+        //"password"+':'+"x"+'}' ;
         JsonParser jp = new JsonParser();
         JsonObject jo = (JsonObject) jp.parse(j);
         Call<JsonObject> call = us.login(jo);
@@ -150,31 +157,31 @@ public class loginfrag extends Fragment {
                 if(response.isSuccessful()){
                     //User r = response.body();
                     //System.out.println("res : "+response.body().toString());
-                   if(response.body().toString().contains("Not"))
-                   {
-                     //  Toast.makeText(;,"invalide username or password ",Toast.LENGTH_SHORT).show();
-                       toastshow("invalide username or password");
+                    if(response.body().toString().contains("Not"))
+                    {
+                        //  Toast.makeText(;,"invalide username or password ",Toast.LENGTH_SHORT).show();
+                        toastshow("invalide username or password");
 
-                   }
-                   else {
-                       User.usercur = gson.fromJson(response.body().toString(),User.class);
-                       System.out.println("hjbsl"+User.usercur.getUsername());
 
-                       Intent intent = new Intent(loginfrag.this.getContext(), Menu.class);
-                       startActivity(intent);
-                   }
+                    }
+                    else {
+                        User.usercur = gson.fromJson(response.body().toString(),User.class);
+                        System.out.println("hjbsl"+User.usercur.getUsername());
+                        Intent intent = new Intent(loginfrag.this.getContext(), Menu.class);
+                        startActivity(intent);
+                    }
                 }
             }
 
-
-
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-
-
 
             }
         });
 
     }
+
+
+
+
 }

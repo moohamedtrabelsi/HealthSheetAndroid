@@ -25,7 +25,10 @@ public class PatientListe extends AppCompatActivity {
         setContentView(R.layout.patientlist);
 
         recyclerView = findViewById(R.id.recyclerDoctors);
-        users = new ArrayList<>();
+        users = User.usercur.getRelations();
+        System.out.println("patient"+users.get(0).getEmail());
+
+        users= new ArrayList <>();
 
         for(int i= 0 ; i < 10 ; i++){
             users.add(new User("khenine","oumayma"));

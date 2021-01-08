@@ -5,16 +5,50 @@ import java.util.ArrayList;
 public class User  {
 
 
-    public static User usercur = new User();
+    public static User usercur = new User() ;
 
     String password;
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public ArrayList<String> getListofdp() {
+        return listofdp;
+    }
+
+    public void setListofdp(ArrayList<String> listofdp) {
+        this.listofdp = listofdp;
+    }
+
     String username;
+    String roles;
     String firstname;
     String lastname;
     String email;
     Role role;
     ArrayList<User> relations ;
-    ArrayList<String> listdp;
+    ArrayList<String> listofdp;
 
 
     public Role getRole() {
@@ -31,6 +65,15 @@ public class User  {
     }
 
     public User() {
+
+        this.password = "x"   ;
+        this.username = "x";
+        this.firstname = "a";
+        this.lastname = "a";
+        this.email = "hdg";
+        this.role = new Role();
+        this.listofdp = new ArrayList<>();
+        this.relations = new ArrayList<>();
     }
 
 
@@ -39,7 +82,7 @@ public class User  {
         this.firstname = firstName;
         this.lastname = lastName;
         this.email = email;
-        this.listdp = listdp;
+        this.listofdp = listdp;
     }
 
     public ArrayList<User> getRelations() {
@@ -51,11 +94,11 @@ public class User  {
     }
 
     public ArrayList<String> getListdp() {
-        return listdp;
+        return listofdp;
     }
 
     public void setListdp(ArrayList<String> listdp) {
-        this.listdp = listdp;
+        this.listofdp = listdp;
     }
 
     public User(String password, String username, String firstName, String lastName, String email, Role role, ArrayList<User> listdp) {

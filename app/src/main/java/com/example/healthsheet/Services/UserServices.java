@@ -17,4 +17,9 @@ public interface UserServices {
 
     @POST("auth/updateuser")
     Call<JsonObject> update(@Body JsonObject u);
+
+
+    @POST("auth/getuser")
+    Call<JsonObject> getUser(@Body JsonObject u);
+
 }

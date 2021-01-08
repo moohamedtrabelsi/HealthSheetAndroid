@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.healthsheet.Models.User;
 import com.example.healthsheet.R;
 
 public class AboutDoc extends AppCompatActivity {
+
+    public static User aboutuser ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
