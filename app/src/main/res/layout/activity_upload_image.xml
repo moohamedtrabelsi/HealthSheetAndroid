@@ -37,4 +37,9 @@
         android:textColor="#FBFBFB"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/Oussema"
+        android:layout_width="396dp"
+        android:layout_height="298dp" />
+
 </LinearLayout>

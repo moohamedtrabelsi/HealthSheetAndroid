@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import com.example.healthsheet.Adapter.VisiteAdapter;
 import com.example.healthsheet.Models.Ordonnance;
+import com.example.healthsheet.Models.Visite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ public class MedicalSheet extends AppCompatActivity {
 LinearLayout l ;
 RecyclerView r;
 
-static List<Ordonnance>lv = new ArrayList<>();
+static List<Visite>lv = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

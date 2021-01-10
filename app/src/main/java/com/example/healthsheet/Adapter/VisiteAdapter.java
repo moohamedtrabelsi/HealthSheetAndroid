@@ -17,10 +17,10 @@ import java.util.List;
 
 public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.MyViewHolder> {
 
-    List<com.example.healthsheet.Models.Ordonnance> l ;
+    List<com.example.healthsheet.Models.Visite> l ;
     Context context ;
 
-    public VisiteAdapter(List<com.example.healthsheet.Models.Ordonnance> l)
+    public VisiteAdapter(List<com.example.healthsheet.Models.Visite> l)
     {
 
         this.l = l;
@@ -50,11 +50,11 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.MyViewHold
 
 
        // holder.
-        holder.t.setText(l.get(position).getMedicaments());
+        holder.t.setText(l.get(position).getA().getFilename());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastshow(l.get(position).getMedicaments(),v.getContext());
+                toastshow(l.get(position).getA().getFilename(),v.getContext());
             }
         });
 

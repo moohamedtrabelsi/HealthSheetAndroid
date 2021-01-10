@@ -4,6 +4,8 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
+
+
     defaultConfig {
         applicationId "com.example.healthsheet"
         minSdkVersion 24
@@ -24,6 +26,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8;
         targetCompatibility JavaVersion.VERSION_1_8;
     }
+
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE.txt' // picks the JavaMail license file
+    }
+
+
+repositories {
+    jcenter()
+    maven {
+        url "https://maven.java.net/content/groups/public/"
+    }
+}
+
+
 }
 
 dependencies {
@@ -39,6 +55,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.squareup.retrofit2:retrofit:2.8.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+//    implementation  'javax.mail:javax.mail-api:1.5.3'
+    implementation 'com.sun.mail:android-mail:1.6.2'
+    implementation 'com.sun.mail:android-activation:1.6.2'
+    //implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
 

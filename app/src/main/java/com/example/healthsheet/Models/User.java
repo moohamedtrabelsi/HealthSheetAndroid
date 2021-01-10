@@ -49,7 +49,28 @@ public class User  {
     Role role;
     ArrayList<User> relations ;
     ArrayList<String> listofdp;
+    ArrayList<String> analyses;
 
+    public ArrayList<String> getAnalyses() {
+        return analyses;
+    }
+
+    public void setAnalyses(ArrayList<String> analyses) {
+        this.analyses = analyses;
+    }
+
+    public User(String password, String username, String roles, String firstname, String lastname, String email, Role role, ArrayList<User> relations, ArrayList<String> listofdp, ArrayList<String> analyses) {
+        this.password = password;
+        this.username = username;
+        this.roles = roles;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.role = role;
+        this.relations = relations;
+        this.listofdp = listofdp;
+        this.analyses = analyses;
+    }
 
     public Role getRole() {
         return role;

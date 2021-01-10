@@ -164,6 +164,8 @@ public class loginfrag extends Fragment {
 
     private void dologin (String un , String up){
 
+
+//        GMailSender sender = new GMailSender("username@gmail.com", "password");
         User u = new User();
         u.setUsername(un);
         u.setPassword(up);
@@ -190,10 +192,13 @@ public class loginfrag extends Fragment {
                     {
                         //  Toast.makeText(;,"invalide username or password ",Toast.LENGTH_SHORT).show();
                         toastshow("invalide username or password");
+                        //Toast.makeText()
 
 
                     }
                     else {
+                        toastshow("invalide ");
+
                         User.usercur = gson.fromJson(response.body().toString(),User.class);
                         System.out.println("hjbsl"+User.usercur.getUsername());
                         Intent intent = new Intent(loginfrag.this.getContext(), Menu.class);

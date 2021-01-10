@@ -14,7 +14,7 @@ public class Menu extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         MenuInflater inf = getMenuInflater();
-        inf.inflate(R.menu.menu_patient,menu);
+        inf.inflate(R.menu.hama,menu);
         return true;
     }
 
