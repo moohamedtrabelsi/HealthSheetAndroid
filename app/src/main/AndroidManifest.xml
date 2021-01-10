@@ -20,12 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Signupp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".UpdatePassword"></activity>
+        <activity android:name=".ValiderPassword" />
+        <activity android:name=".EmailForgot" />
+        <activity android:name=".Signupp" >
 
         </activity>
         <activity android:name=".Doctor.AboutPatient" />
@@ -35,12 +33,16 @@
         <activity android:name=".MedicalSheet" />
         <activity android:name=".UploadImage" />
         <activity android:name=".Patient.Account1" />
-        <activity android:name=".Patient.doctorsList"></activity>
+        <activity android:name=".Patient.doctorsList" />
         <activity android:name=".Patient.Menu" />
         <activity android:name=".AcceuilD" />
         <activity android:name=".test" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

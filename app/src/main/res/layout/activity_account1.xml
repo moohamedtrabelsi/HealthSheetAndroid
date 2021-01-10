@@ -6,197 +6,132 @@
     android:id="@+id/Acount"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/b"
-    tools:context=".Patient.Account1"
-    >
+    tools:context=".Patient.Account1">
 
 
-    <ScrollView
-        android:layout_width="400dp"
-        android:layout_height="626dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/view"
+        android:layout_width="410dp"
+        android:layout_height="133dp"
+        android:background="@drawable/hedhi"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
+    <EditText
+        android:id="@+id/AccounttextNom"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-            <LinearLayout
-                android:layout_width="194dp"
-                android:layout_height="728dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-                android:layout_marginTop="55dp"
-                android:orientation="vertical">
+    <EditText
 
-                <TextView
+        android:id="@+id/AccounttextP"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-                    android:layout_width="154dp"
-                    android:layout_height="54dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="45dp"
-                    android:text="First Name :"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/AccountUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccounttextD"
+        app:layout_constraintVertical_bias="0.23" />
 
-                <TextView
+    <EditText
+        android:id="@+id/AccounttextD"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-                    android:layout_width="147dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="35dp"
-                    android:shadowColor="@color/design_default_color_background"
-                    android:text="Last Name :"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccounttextA" />
 
-                <TextView
+    <EditText
+        android:id="@+id/AccounttextA"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-                    android:layout_width="151dp"
-                    android:layout_height="44dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="55dp"
-                    android:text="E-mail :"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccounttextPh" />
 
-                <TextView
+    <EditText
+        android:id="@+id/AccounttextPh"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-                    android:layout_width="145dp"
-                    android:layout_height="51dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="55dp"
-                    android:text="Phone :"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccounttextE" />
 
-                <TextView
+    <EditText
 
-                    android:layout_width="140dp"
-                    android:layout_height="58dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="55dp"
-                    android:fontFamily="sans-serif"
-                    android:text="Adress :"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
+        android:id="@+id/AccounttextE"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-                <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccounttextPrenom" />
 
-                    android:layout_width="142dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="55dp"
-                    android:text="Age :"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
+    <EditText
+        android:id="@+id/AccounttextPrenom"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
 
-                <TextView
-                    android:layout_width="145dp"
-                    android:layout_height="47dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="55dp"
-                    android:text="Password :"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="216dp"
-                android:layout_height="726dp"
-                android:layout_marginTop="55dp"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/AccounttextNom"
-                    android:layout_width="147dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="45dp"
-
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-                <EditText
-                    android:id="@+id/AccounttextPrenom"
-                    android:layout_width="146dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="30dp"
-
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-                <EditText
-
-                    android:id="@+id/AccounttextE"
-                    android:layout_width="139dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="50dp"
-
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-                <EditText
-                    android:id="@+id/AccounttextPh"
-                    android:layout_width="138dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="55dp"
-
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-                <EditText
-                    android:id="@+id/AccounttextA"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="60dp"
-
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-                <EditText
-                    android:id="@+id/AccounttextD"
-                    android:layout_width="143dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="60dp"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-
-                <EditText
-
-                    android:id="@+id/AccounttextP"
-                    android:layout_width="147dp"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="45dp"
-                    android:textColor="@color/design_default_color_background"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="124dp"
+        android:textColor="@color/design_default_color_background"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AccounttextNom" />
 
     <Button
         android:id="@+id/AccountUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/transparent"
+        android:layout_width="163dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="16dp"
+        android:background="#00A79B"
+        android:backgroundTint="#00A79B"
         android:text="Update"
         android:textColor="#FAF6F6"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="256dp"
+        android:text="Account"
+        android:textColor="@color/design_default_color_background"
+        android:textColorHint="@color/design_default_color_background"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

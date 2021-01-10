@@ -3,7 +3,9 @@ package com.example.healthsheet.Patient;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.webkit.ConsoleMessage;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -56,6 +58,8 @@ public class Account1 extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 u.setEmail(email.getText().toString());
                 u.setFirstName(fname.getText().toString());
                 u.setLastName(lname.getText().toString());

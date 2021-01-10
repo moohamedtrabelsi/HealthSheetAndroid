@@ -1,67 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".loginfrag">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/loglogin"
-            android:layout_width="263dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="68dp"
-            android:background="#FFFFFF"
-            android:backgroundTint="#2530EF"
-            android:text="Login"
-            android:textColor="#F4F4F3"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.418"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logpassword"
-            tools:ignore="OnClick" />
+    <EditText
+        android:id="@+id/logusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:shadowRadius="@dimen/material_emphasis_high_type"
+        android:textAlignment="center"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textCursorDrawable="@color/cardview_dark_background"
+        app:layout_constraintBottom_toTopOf="@+id/logpassword"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/logpassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:ems="10"
-            android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.477"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logusername" />
+    <Button
+        android:id="@+id/forgotpassword"
+        android:layout_width="173dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="92dp"
+        android:background="@android:color/transparent"
+        android:text="forgot password ?"
+        android:textColor="#00A79B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/forgotpassword"
-            android:layout_width="196dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="84dp"
-            android:background="@android:color/transparent"
-            android:text="forgot password ?"
-            android:textColor="#265DCC"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loglogin" />
+    <Button
+        android:id="@+id/loglogin"
+        android:layout_width="217dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="28dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#00A79B"
+        android:text="Login"
+        android:textColor="#F4F4F3"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
 
-        <EditText
-            android:id="@+id/logusername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="80dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/logpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        app:layout_constraintBottom_toTopOf="@+id/loglogin"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>

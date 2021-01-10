@@ -11,24 +11,41 @@ tools:context=".Patient.doctorsList"
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerDoctors"
-        android:layout_width="425dp"
-        android:layout_height="338dp"
+        android:layout_width="396dp"
+        android:layout_height="424dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Aboutme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="160dp"
         android:text="About"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerDoctors"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerDoctors" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="409dp"
+        android:layout_height="171dp"
+        android:background="@drawable/hedhi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctros List"
+        android:textColor="@color/design_default_color_background"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="76dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 

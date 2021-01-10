@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 
 public interface UserServices {
 
@@ -21,5 +22,12 @@ public interface UserServices {
 
     @POST("auth/getuser")
     Call<JsonObject> getUser(@Body JsonObject u);
+
+    @POST("auth/email")
+    Call<JsonObject> getEmail(@Body JsonObject u);
+
+
+    @PUT("auth/updatePass")
+    Call<JsonObject> updatePass(@Body JsonObject u);
 
 }

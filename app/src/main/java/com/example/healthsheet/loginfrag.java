@@ -46,6 +46,7 @@ public class loginfrag extends Fragment {
     EditText username ;
     EditText passwor ;
     Button logbut ;
+    Button forg ;
     UserServices us;
 
     private Gson gson;
@@ -90,6 +91,7 @@ public class loginfrag extends Fragment {
         username = v.findViewById(R.id.logusername);
         passwor = v.findViewById(R.id.logpassword);
         logbut = v.findViewById(R.id.loglogin);
+        forg = v.findViewById(R.id.forgotpassword);
         us= ApiUtils.getUserServices();
         c = this.getContext();
 
@@ -118,6 +120,26 @@ public class loginfrag extends Fragment {
 
 
 
+        forg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                    Forget();
+
+
+                  /* User u = new User();
+                    u.setUsername(usernam);
+                    u.setPassword(userpas);
+
+                    Gson g = new Gson();
+                    String j = g.toJson(u);
+                    Toast.makeText(v.getContext(),j,Toast.LENGTH_SHORT).show();*/
+
+                }
+
+
+        });
+
         return v ;
 
     }
@@ -133,6 +155,13 @@ public class loginfrag extends Fragment {
         }
         return true;
     }
+
+    private void Forget (){
+        Intent  intent = new Intent(loginfrag.this.getContext(), EmailForgot.class);
+        startActivity(intent);
+
+    }
+
     private void dologin (String un , String up){
 
         User u = new User();

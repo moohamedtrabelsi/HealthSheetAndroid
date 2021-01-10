@@ -3,6 +3,7 @@ package com.example.healthsheet;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +18,6 @@ ConstraintLayout cl ;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         signup = findViewById(R.id.Signup);
         login = findViewById(R.id.Login);
         cl = findViewById(R.id.fragcont);
