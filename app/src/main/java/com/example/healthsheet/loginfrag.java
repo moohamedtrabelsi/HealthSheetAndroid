@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.healthsheet.Api.ApiClient;
 import com.example.healthsheet.Api.ApiUtils;
 import com.example.healthsheet.Api.Responseobj;
+import com.example.healthsheet.Doctor.MenuDoct;
 import com.example.healthsheet.Models.User;
 import com.example.healthsheet.Patient.Menu;
 import com.example.healthsheet.Services.UserServices;
@@ -200,9 +201,15 @@ public class loginfrag extends Fragment {
                         toastshow("invalide ");
 
                         User.usercur = gson.fromJson(response.body().toString(),User.class);
+                        if(User.usercur.getRoles()=="DOCTOR")
+                        {
                         System.out.println("hjbsl"+User.usercur.getUsername());
-                        Intent intent = new Intent(loginfrag.this.getContext(), Menu.class);
-                        startActivity(intent);
+                        Intent intent = new Intent(loginfrag.this.getContext(), MenuDoct.class);
+                        startActivity(intent);}
+                        else {
+                            Intent intent = new Intent(loginfrag.this.getContext(), Menu.class);
+                            startActivity(intent);
+                        }
                     }
                 }
             }

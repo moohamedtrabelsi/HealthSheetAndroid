@@ -22,7 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Friend"></activity>
         <activity android:name=".AddFriend" />
         <activity android:name=".Doctor.AccountDoctor" />
         <activity android:name=".LoginA">
@@ -32,14 +31,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Doctor.AnalyseAffiche">
+</activity>
+        <activity android:name=".Doctor.ListAnalyse" />
+        <activity android:name=".SendImage" />
         <activity android:name=".UpdatePassword" />
         <activity android:name=".ValiderPassword" />
         <activity android:name=".EmailForgot" />
         <activity android:name=".Signupp" />
         <activity android:name=".Doctor.AboutPatient" />
+        <activity android:name=".Doctor.MenuDoct" />
         <activity android:name=".Patient.AboutDoc" />
         <activity android:name=".CreerOrdonnance" />
-        <activity android:name=".Ordonnance" />
+        <activity android:name=".Ordonnance" >
+
+
+        </activity>
+
         <activity android:name=".MedicalSheet" />
         <activity android:name=".UploadImage" />
         <activity android:name=".Patient.Account1" />
@@ -47,7 +55,11 @@
         <activity android:name=".Patient.Menu" />
         <activity android:name=".AcceuilD" />
         <activity android:name=".test" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+
+
+
+        </activity>
     </application>
 
 </manifest>

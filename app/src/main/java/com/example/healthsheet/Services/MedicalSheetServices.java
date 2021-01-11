@@ -11,5 +11,12 @@ public interface MedicalSheetServices {
     @POST("createordon")
     Call<JsonObject> createOrdennance(@Body JsonObject o);
 
+    @POST("createvisite")
+    Call<JsonObject> createVisite(@Body JsonObject o);
+
+    @POST("auth/send")
+    Call<JsonObject> sendAnalyse(@Body JsonObject o);
+
+
 
 }

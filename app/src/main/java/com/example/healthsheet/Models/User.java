@@ -41,6 +41,10 @@ public class User  {
         this.listofdp = listofdp;
     }
 
+    public User(String username) {
+        this.username = username;
+    }
+
     String username;
     String roles;
     String firstname;

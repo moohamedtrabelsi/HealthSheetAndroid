@@ -50,11 +50,11 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.MyViewHold
 
 
        // holder.
-        holder.t.setText(l.get(position).getA().getFilename());
+        holder.t.setText(l.get(position).getAnalyse());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastshow(l.get(position).getA().getFilename(),v.getContext());
+                toastshow(l.get(position).getAnalyse(),v.getContext());
             }
         });
 

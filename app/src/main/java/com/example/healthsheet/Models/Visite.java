@@ -1,27 +1,28 @@
 package com.example.healthsheet.Models;
 
 public class Visite {
-    private Analyse a ;
-    private Ordonnance o;
+    private String ordonnance ;
+    private String analyse ;
 
-    public Analyse getA() {
-        return a;
+
+    public String getOrdonnance() {
+        return ordonnance;
     }
 
-    public void setA(Analyse a) {
-        this.a = a;
+    public void setOrdonnance(String ordonnance) {
+        this.ordonnance = ordonnance;
     }
 
-    public Ordonnance getO() {
-        return o;
+    public String getAnalyse() {
+        return analyse;
     }
 
-    public void setO(Ordonnance o) {
-        this.o = o;
+    public void setAnalyse(String analyse) {
+        this.analyse = analyse;
     }
 
-    public Visite(Analyse a, Ordonnance o) {
-        this.a = a;
-        this.o = o;
+    public Visite(String ordonnance, String analyse) {
+        this.ordonnance = ordonnance;
+        this.analyse = analyse;
     }
 }

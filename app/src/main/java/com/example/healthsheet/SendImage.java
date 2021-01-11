@@ -1,10 +1,8 @@
 package com.example.healthsheet;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -20,13 +18,18 @@ import android.widget.ImageView;
 
 import com.example.healthsheet.Adapter.FilePath;
 import com.example.healthsheet.Api.ApiUtils;
+import com.example.healthsheet.Models.Analyse;
+import com.example.healthsheet.Models.User;
+import com.example.healthsheet.Patient.AboutDoc;
 import com.example.healthsheet.Services.ImagesServices;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import okhttp3.MediaType;
@@ -37,45 +40,32 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class UploadImage extends AppCompatActivity {
+public class SendImage extends AppCompatActivity {
+
 
     public static final String KEY_User_Document1 = "doc1";
     ImageView IDProf,ous;
     Button Upload_Btn ;
     Bitmap b;
+    private Gson gson;
+    private GsonBuilder gsonBuilder;
 
     private String Document_img1="" ;
     String u = "http://192.168.1.93:3000/api/image/1610111086511-HealthSheet-file.jpg";
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload_image);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        setContentView(R.layout.activity_send_image);
 
-        StrictMode.setThreadPolicy(policy);
-        ous = (ImageView)findViewById(R.id.Oussema);
-        IDProf=(ImageView)findViewById(R.id.IdProf);
-        try {
-            Bitmap bitmap = BitmapFactory.decodeStream((InputStream)new URL(u).getContent());
-            ous.setImageBitmap(bitmap);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        ous = (ImageView)findViewById(R.id.sOussema);
+        IDProf=(ImageView)findViewById(R.id.sIdProf);
+
 
         //IDProf.setImageURI(u);
-        Upload_Btn=(Button)findViewById(R.id.UploadBtn);
+        Upload_Btn=(Button)findViewById(R.id.sUploadBtn);
 
-        Upload_Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //uploadFile(IDProf.getIma);
-                //loadi();
-            }
-        });
 
         IDProf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,39 +75,7 @@ public class UploadImage extends AppCompatActivity {
             }
         });
 
-       // Upload_Btn.setOnClickListener(this);
     }
-
-    private void selectImage() {
-        final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
-        AlertDialog.Builder builder = new AlertDialog.Builder(UploadImage.this);
-
-       // android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(Uplode_Reg_Photo.this);
-        builder.setTitle("Add Photo!");
-        builder.setItems(options, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                if (options[item].equals("Take Photo"))
-                {
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    File f = new File(android.os.Environment.getExternalStorageDirectory(), "temp.jpg");
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(f));
-                    startActivityForResult(intent, 1);
-                }
-                else if (options[item].equals("Choose from Gallery"))
-                {
-                    Intent intent = new   Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(intent, 2);
-                }
-                else if (options[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
-            }
-        });
-        builder.show();
-    }
-
-
 
 
 
@@ -130,7 +88,7 @@ public class UploadImage extends AppCompatActivity {
 
                 String filePath = getPath(selectedImage);
                 String file_extn = filePath.substring(filePath.lastIndexOf(".") + 1);
-              //  image_name_tv.setText(filePath);
+                //  image_name_tv.setText(filePath);
 
                 if (file_extn.equals("img") || file_extn.equals("jpg") || file_extn.equals("jpeg") || file_extn.equals("gif") || file_extn.equals("png")) {
                     IDProf.setImageURI(selectedImage);
@@ -149,7 +107,8 @@ public class UploadImage extends AppCompatActivity {
                             IDProf.setImageBitmap(bitmap);
                             System.out.println(selectedImage.toString());
                             System.out.println(selectedImage.getPath().substring(13));
-                           uploadFile(selectedImage);
+                            uploadFile(selectedImage);
+
                         } catch (IOException e) {
                             Log.i("TAG", "Some exception " + e);
                         }
@@ -169,37 +128,88 @@ public class UploadImage extends AppCompatActivity {
     }
 
 
-
     private void uploadFile(Uri fileUri) {
         ImagesServices service =
                 ApiUtils.getImagesServices();
 
-        String selectedFilePath = FilePath.getPath(UploadImage.this, fileUri);
+        String selectedFilePath = FilePath.getPath(SendImage.this, fileUri);
         final File f = new File(selectedFilePath);
+        gsonBuilder = new GsonBuilder();
+        gson = gsonBuilder.create();
 
+
+
+
+        // create RequestBody instance from file
         RequestBody requestFile =
                 RequestBody.create(
                         MediaType.parse(getContentResolver().getType(fileUri)),
                         f
                 );
 
+        // MultipartBody.Part is used to send also the actual file name
         MultipartBody.Part body =
                 MultipartBody.Part.createFormData("file", f.getName(), requestFile);
 
-       Call<JsonObject> call = service.upload( body);
+        // add another part within the multipart request
+        /*String descriptionString = "hello, this is description speaking";
+        RequestBody description =
+                RequestBody.create(
+                        okhttp3.MultipartBody.FORM, descriptionString);*/
+
+        // finally, execute the request
+        Call<JsonObject> call = service.upload( body);
         call.enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call,
                                    Response<JsonObject> response) {
                 Log.v("Upload", "success");
+
+                Analyse a = gson.fromJson(response.body().toString(), Analyse.class);
+                System.out.println("hhhhhhh"+a.getFilename());
+                a.setDoctor(AboutDoc.aboutuser.getUsername());
+                a.setPatient(User.usercur.getUsername());
+                send(a);
+                //System.out.println("fvhr"+response.body().toString());
+
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
-                Log.e("Upload error:", t.getMessage());
+
             }
 
+
+
         });
+    }
+
+    public void send(Analyse a){
+        ImagesServices service =
+                ApiUtils.getImagesServices();
+        gsonBuilder = new GsonBuilder();
+        gson = gsonBuilder.create();
+
+        Gson g = new Gson();
+        String j = g.toJson(a);
+        JsonParser jp = new JsonParser();
+        JsonObject jo = (JsonObject) jp.parse(j);
+        Call<JsonObject> call = service.sendAnalyse(jo);
+        call.enqueue(new Callback<JsonObject>() {
+            @Override
+            public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<JsonObject> call, Throwable t) {
+
+            }
+        });
+
+
+
+
     }
 
 
@@ -210,7 +220,6 @@ public class UploadImage extends AppCompatActivity {
 
         startActivityForResult(photoPickerIntent, 1623);
     }
-
 
 
 }

@@ -24,13 +24,11 @@ public class AdpterRecyclerPatient extends RecyclerView.Adapter<AdpterRecyclerPa
 
         public ViewHolder(View itemView, AdpterRecyclerPatient adpterRecyler) {
             super(itemView);
-            FirstName = (TextView)itemView.findViewById(R.id.FirstName);
-            LastName = (TextView)itemView.findViewById(R.id.LastName);
+            LastName = (TextView)itemView.findViewById(R.id.sender);
         }
 
         public void updateholder(User u)
         {
-            FirstName.setText(u.getFirstName());
             LastName.setText(u.getLastName());
         }
 
