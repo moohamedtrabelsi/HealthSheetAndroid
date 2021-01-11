@@ -74,12 +74,12 @@ public class signupfrag extends Fragment {
         View v = inflater.inflate(R.layout.fragment_signupfrag, container, false);
         username = v.findViewById(R.id.signupusername);
 
-         frname = v.findViewById(R.id.signuppfirstname1);
+       /*  frname = v.findViewById(R.id.signuppfirstname1);
          lsname = v.findViewById(R.id.signupplastname1);
          passw1 = v.findViewById(R.id.signuppassword11);
          passw2 = v.findViewById(R.id.signuppassword21);
          email = v.findViewById(R.id.signuppmail1);
-         signup =  v.findViewById(R.id.signupbtn);
+         signup =  v.findViewById(R.id.signupbtn);*/
         us= ApiUtils.getUserServices();
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -10,6 +10,7 @@
     android:layout_height="match_parent"
     tools:context=".Signupp">
 
+<<<<<<< Updated upstream
 
     <EditText
         android:id="@+id/signupusername1"
@@ -60,9 +61,18 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColorHint="@android:color/background_dark"
+=======
+    <View
+        android:id="@+id/view5"
+        android:layout_width="324dp"
+        android:layout_height="115dp"
+        android:background="@drawable/hedhi"
+        app:layout_constraintEnd_toEndOf="parent"
+>>>>>>> Stashed changes
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupusername1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< Updated upstream
     <EditText
         android:id="@+id/signuppfirstname1"
         android:layout_width="213dp"
@@ -174,8 +184,146 @@
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+=======
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <EditText
+            android:id="@+id/usern"
+            android:layout_width="200dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="64dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/design_default_color_on_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/signuppa"
+            android:layout_width="199dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="68dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="331dp" />
+
+        <EditText
+            android:id="@+id/sigpmail"
+            android:layout_width="200dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="68dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColorHint="@android:color/widget_edittext_dark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="284dp" />
+
+        <EditText
+            android:id="@+id/siglastname"
+            android:layout_width="199dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="68dp"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/design_default_color_on_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="223dp" />
+
+        <EditText
+            android:id="@+id/sigfirstname"
+            android:layout_width="200dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="64dp"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/design_default_color_on_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="177dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/signupbtn"
+            android:layout_width="201dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#00A79B"
+            android:text="Signup"
+            android:textColor="@color/design_default_color_background"
+            android:textColorHighlight="@android:color/darker_gray"
+            android:textColorHint="#00A79B"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Switch
+            android:id="@+id/switchD"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="64dp"
+            android:text="Doctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="417dp" />
+
+        <Switch
+            android:id="@+id/switchP"
+            android:layout_width="202dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="60dp"
+            android:text="Patient"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="464dp" />
+>>>>>>> Stashed changes
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="136dp"
+            android:text="Create a New Account"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<<<<<<< Updated upstream
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
+=======
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> Stashed changes

@@ -23,7 +23,6 @@ import retrofit2.Response;
 public class Signupp extends AppCompatActivity {
 
 
-
     EditText username;
     EditText frname;
     EditText lsname;
@@ -33,18 +32,20 @@ public class Signupp extends AppCompatActivity {
     UserServices us ;
     Button signup ;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signupp);
 
-        username = findViewById(R.id.signupusername1);
+        username = findViewById(R.id.signupusername);
 
-        frname = findViewById(R.id.signuppfirstname1);
-        lsname = findViewById(R.id.signupplastname1);
-        passw1 = findViewById(R.id.signuppassword11);
+        frname = findViewById(R.id.signupfirstname);
+        lsname = findViewById(R.id.signuplastname);
+        passw1 = findViewById(R.id.signuppassword);
         passw2 = findViewById(R.id.signuppassword21);
-        email = findViewById(R.id.signuppmail1);
+        email = findViewById(R.id.signupmail);
         signup = findViewById(R.id.signupbtn1h);
         us= ApiUtils.getUserServices();
 
