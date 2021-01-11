@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginA">
+
+
+    <EditText
+        android:id="@+id/logusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="User Name"
+        android:inputType="textPersonName"
+        android:shadowRadius="@dimen/material_emphasis_high_type"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/tertiary_text_dark"
+        android:textCursorDrawable="@color/cardview_dark_background"
+        app:layout_constraintBottom_toTopOf="@+id/logpassword"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/logpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="140dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/tertiary_text_dark"
+        app:layout_constraintBottom_toTopOf="@+id/loglogin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="28dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/forgotpassword"
+        app:layout_constraintEnd_toStartOf="@+id/logpassword"
+        app:srcCompat="@drawable/iconpassword" />
+
+    <Button
+        android:id="@+id/forgotpassword"
+        android:layout_width="174dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="228dp"
+        android:background="@android:color/transparent"
+        android:text="forgot password ?"
+        android:textColor="#00A79B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbRememberMe"
+        android:layout_width="139dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="Remind Me"
+        android:textColor="#00A79B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logpassword" />
+
+    <Button
+        android:id="@+id/loglogin"
+        android:layout_width="217dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="84dp"
+        android:background="@color/design_default_color_background"
+        android:backgroundTint="#00A79B"
+        android:text="Login"
+        android:textColor="#F4F4F3"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotpassword" />
+
+    <Button
+        android:id="@+id/Signup"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="217dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="84dp"
+        android:background="#00A79B"
+        android:backgroundTint="#00A79B"
+        android:text="Sign up"
+        android:textColor="@android:color/background_light"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loglogin" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="25dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/logusername"
+        app:srcCompat="@drawable/iconuser" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="410dp"
+        android:layout_height="214dp"
+        android:background="@drawable/hedhi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="401dp"
+        android:layout_height="213dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

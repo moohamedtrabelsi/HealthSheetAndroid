@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Acount"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Patient.Account1">
-
+    tools:context=".Doctor.AccountDoctor">
 
     <View
         android:id="@+id/view"
@@ -18,42 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/DoctextNom"
-        android:layout_width="158dp"
-        android:layout_height="50dp"
-
-        android:layout_marginTop="152dp"
-        android:layout_marginEnd="124dp"
-        android:hint="First Name"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_background"
-        android:textColorHint="@android:color/background_dark"
-        android:textSize="14sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-
-        android:id="@+id/DoctextP"
-        android:layout_width="158dp"
-        android:layout_height="50dp"
-
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="124dp"
-        android:hint="Password"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_background"
-        android:textColorHint="@android:color/background_dark"
-        android:textSize="14sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/DoUpdate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctextD"
-        app:layout_constraintVertical_bias="0.23" />
-
-    <EditText
-        android:id="@+id/DoctextD"
+        android:id="@+id/textD"
         android:layout_width="158dp"
         android:layout_height="50dp"
 
@@ -66,30 +28,14 @@
         android:textSize="14sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctextA" />
+        app:layout_constraintTop_toBottomOf="@+id/textNom" />
 
     <EditText
-        android:id="@+id/DoctextA"
+        android:id="@+id/textPh"
         android:layout_width="158dp"
         android:layout_height="50dp"
 
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="124dp"
-        android:hint="Adress"
-        android:textAlignment="center"
-        android:textColor="@color/design_default_color_background"
-        android:textColorHint="@android:color/background_dark"
-        android:textSize="14sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctextPh" />
-
-    <EditText
-        android:id="@+id/DoctextPh"
-        android:layout_width="158dp"
-        android:layout_height="50dp"
-
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="124dp"
         android:hint="Phone"
         android:textAlignment="center"
@@ -98,15 +44,15 @@
         android:textSize="14sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctextE" />
+        app:layout_constraintTop_toBottomOf="@+id/textA" />
 
     <EditText
 
-        android:id="@+id/DoctextE"
+        android:id="@+id/textE"
         android:layout_width="158dp"
         android:layout_height="50dp"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="124dp"
         android:hint="Email"
         android:textAlignment="center"
@@ -115,14 +61,14 @@
         android:textSize="14sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctextPrenom" />
+        app:layout_constraintTop_toBottomOf="@+id/textPh" />
 
     <EditText
-        android:id="@+id/DoctextPrenom"
+        android:id="@+id/textPrenom"
         android:layout_width="158dp"
         android:layout_height="50dp"
 
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="124dp"
         android:hint="Last Name"
         android:textAlignment="center"
@@ -131,28 +77,77 @@
         android:textSize="14sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctextNom" />
+        app:layout_constraintTop_toBottomOf="@+id/textE" />
+
+    <EditText
+        android:id="@+id/textNom"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="124dp"
+        android:hint="First Name"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPrenom" />
+
+    <EditText
+
+        android:id="@+id/textP"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="124dp"
+        android:hint="Password"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textD" />
+
+    <EditText
+        android:id="@+id/textA"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="124dp"
+        android:hint="Adress"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_background"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <Button
-        android:id="@+id/DoUpdate"
+        android:id="@+id/DUpdate"
         android:layout_width="163dp"
         android:layout_height="45dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="124dp"
-        android:layout_marginBottom="16dp"
         android:background="#00A79B"
         android:backgroundTint="#00A79B"
         android:text="Update"
         android:textColor="#FAF6F6"
         android:textSize="18sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textP" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="134dp"
         android:layout_height="48dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="248dp"
         android:text="Account"
         android:textColor="@color/design_default_color_background"

@@ -73,7 +73,7 @@ public class VisiteAdapter extends RecyclerView.Adapter<VisiteAdapter.MyViewHold
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             //i = itemView.findViewById(R.id.imgrow);
-            t = itemView.findViewById(R.id.ordennance);
+            t = itemView.findViewById(R.id.Ordonnance);
 
         }
         public void updateholder(Ordonnance or )

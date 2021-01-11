@@ -1,4 +1,4 @@
-package com.example.healthsheet.Patient;
+package com.example.healthsheet.Doctor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Account1 extends AppCompatActivity {
+public class AccountDoctor extends AppCompatActivity {
 
     User u = User.usercur;
     EditText fname ;
@@ -27,25 +27,17 @@ public class Account1 extends AppCompatActivity {
     EditText email ;
     Button update ;
     UserServices us ;
-    //EditText pass ;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account1);
+        setContentView(R.layout.activity_account_doctor);
 
-        try{
-            this.getSupportActionBar().hide();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        fname = findViewById(R.id.DoctextNom);
-        lname = findViewById(R.id.DoctextPrenom);
-        email = findViewById(R.id.DoctextE);
-        update = findViewById(R.id.DoUpdate);
+        fname = findViewById(R.id.textA);
+        lname = findViewById(R.id.textPrenom);
+        email = findViewById(R.id.textE);
         us = ApiUtils.getUserServices();
+
         fname.setText(u.getFirstName());
 
         email.setText(u.getEmail());

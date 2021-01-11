@@ -7,14 +7,13 @@ import android.content.Intent;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.example.healthsheet.About;
 import com.example.healthsheet.R;
 
 public class Menu extends AppCompatActivity {
 
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         MenuInflater inf = getMenuInflater();
-        inf.inflate(R.menu.hama,menu);
+        inf.inflate(R.menu.menu_patient,menu);
         return true;
     }
 
@@ -29,7 +28,7 @@ public class Menu extends AppCompatActivity {
         }
         else
         if(id == R.id.About){
-            Intent intent = new Intent(Menu.this, About.class);
+            Intent intent = new Intent(Menu.this,AboutDoc.class);
             startActivity(intent);
             return true ;
 

@@ -17,39 +17,37 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true"
-
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".UpdatePassword"></activity>
-        <activity android:name=".ValiderPassword" />
-        <activity android:name=".EmailForgot" />
-        <activity android:name=".Signupp" >
-
-
-        </activity>
-        <activity android:name=".Doctor.AboutPatient" />
-        <activity android:name=".Patient.AboutDoc" />
-        <activity android:name=".CreerOrdonnance" />
-        <activity android:name=".Ordonnance" />
-        <activity android:name=".MedicalSheet" />
-        <activity android:name=".UploadImage">
-
-        </activity>
-        <activity android:name=".Patient.Account1" />
-        <activity android:name=".Patient.doctorsList" />
-        <activity android:name=".Patient.Menu" />
-        <activity android:name=".AcceuilD" />
-        <activity android:name=".test" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Friend"></activity>
+        <activity android:name=".AddFriend" />
+        <activity android:name=".Doctor.AccountDoctor" />
+        <activity android:name=".LoginA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UpdatePassword" />
+        <activity android:name=".ValiderPassword" />
+        <activity android:name=".EmailForgot" />
+        <activity android:name=".Signupp" />
+        <activity android:name=".Doctor.AboutPatient" />
+        <activity android:name=".Patient.AboutDoc" />
+        <activity android:name=".CreerOrdonnance" />
+        <activity android:name=".Ordonnance" />
+        <activity android:name=".MedicalSheet" />
+        <activity android:name=".UploadImage" />
+        <activity android:name=".Patient.Account1" />
+        <activity android:name=".Patient.doctorsList" />
+        <activity android:name=".Patient.Menu" />
+        <activity android:name=".AcceuilD" />
+        <activity android:name=".test" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -22,8 +22,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder> {
+public class AdapterFriend  {
 
+/*
     private Gson gson;
     private GsonBuilder gsonBuilder;
     UserServices us;
@@ -33,10 +34,8 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
         TextView FirstName ,LastName ;
 
 
-
-
-        public ViewHolder(View ItemView, AdpterRecyler adapterFriend) {
-            super(ItemView);
+        public ViewHolder(View itemView, AdpterRecyler adpterRecyler) {
+            super(itemView);
             FirstName = (TextView)itemView.findViewById(R.id.FirstName);
             LastName = (TextView)itemView.findViewById(R.id.LastName);
         }
@@ -52,32 +51,33 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
     private final ArrayList<User> users;
     private Context mContext;
 
-    public AdpterRecyler(Context mContext, ArrayList<User> users) {
+    public AdapterFriend(Context mContext, ArrayList<User> users) {
         this.mContext = mContext ;
         this.users = users;
     }
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder( @NonNull ViewGroup parent, int viewType) {
-        View mItemView = LayoutInflater.from(mContext).inflate(R.layout.doctor, parent, false);
+    public AdapterFriend.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View mItemView = LayoutInflater.from(mContext).inflate(R.layout.frind, parent, false);
 
-        return new ViewHolder(mItemView, this);
+        return new AdapterFriend.ViewHolder(mItemView,mContext);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-      User u = users.get(position);
+        User u = users.get(position);
 
-      holder.FirstName.setText(u.firstname);
-      holder .LastName.setText(u.lastname);
-      holder.FirstName.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-         //   AboutDoc.aboutuser = thatUser(holder.FirstName.getText().toString());
-          }
-      });
-
+        holder.FirstName.setText(u.firstname);
+        holder .LastName.setText(u.lastname);
+        holder.FirstName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //   AboutDoc.aboutuser = thatUser(holder.FirstName.getText().toString());
+            }
+        });
     }
+
+
 
 
     public User thatUser(String s)
@@ -116,6 +116,7 @@ public class AdpterRecyler extends RecyclerView.Adapter<AdpterRecyler.ViewHolder
     @Override
     public int getItemCount() {
         return users .size();
-    }
+    }*/
 
 }
+

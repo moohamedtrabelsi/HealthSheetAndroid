@@ -18,34 +18,37 @@ tools:context=".MedicalSheet">
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="327dp"
-            android:layout_height="202dp"
+            android:layout_width="241dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="272dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
+                android:layout_width="133dp"
+                android:layout_height="43dp"
                 android:layout_marginTop="34dp"
-                android:text="Name" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:ems="10"
-                android:layout_marginTop="12dp"
+                android:hint="First Name"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:textColorHint="@color/design_default_color_on_secondary" />
+
+            <TextView
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="133dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textColorHint="@android:color/background_dark" />
         </LinearLayout>
     </LinearLayout>
 

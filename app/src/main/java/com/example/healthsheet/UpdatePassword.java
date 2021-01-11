@@ -21,6 +21,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UpdatePassword extends AppCompatActivity {
+    public static String email;
     Button btnUpdate ;
     EditText nv ;
     UserServices us;
@@ -32,14 +33,16 @@ public class UpdatePassword extends AppCompatActivity {
         setContentView(R.layout.activity_update_password);
         btnUpdate = findViewById(R.id.btnUpdate);
         nv = findViewById(R.id.NvPassword);
+        u=new User(email);
+        us = ApiUtils.getUserServices();
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             u.setPassword(nv.getText().toString());
             doUpdate(u);
-                // Intent intent = new Intent(UpdatePassword.this, loginfrag.class);
-                //startActivity(intent);
+                Intent intent = new Intent(UpdatePassword.this, LoginA.class);
+                startActivity(intent);
             }
         });
     }

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class ValiderPassword extends AppCompatActivity {
 
+    public static String email;
     EditText code ;
     Button btnOk ;
     EmailForgot emailForgot;

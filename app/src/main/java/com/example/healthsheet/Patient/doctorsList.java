@@ -44,7 +44,7 @@ public class doctorsList extends AppCompatActivity {
         setContentView(R.layout.activity_doctors_list2);
         users = new ArrayList<>();
         us= ApiUtils.getUserServices();
-        ab = findViewById(R.id.Aboutme);
+
 
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +54,7 @@ public class doctorsList extends AppCompatActivity {
             }
         });
 
-        System.out.println("yee raabiii"+User.usercur.getListdp().size());
+        System.out.println("yee raabi"+User.usercur.getListdp().size());
 
        // System.out.println("doctor"+users.get(0).getEmail());
         recyclerView = findViewById(R.id.recyclerDoctors);

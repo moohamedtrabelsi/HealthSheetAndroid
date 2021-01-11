@@ -75,15 +75,15 @@ public class Signupp extends AppCompatActivity {
             Toast.makeText(this,"username is required",Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(up==null || up.trim().length()==0 ){
+        if((up==null || up.trim().length()==0 )&(upp.equals(up))&&(upp.trim().length()>0)&&(upp.trim().length()<8)){
             Toast.makeText(this,"passwordisrequired",Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(upp==null || upp.trim().length()==0 ){
-            Toast.makeText(this,"passwordisrequired",Toast.LENGTH_SHORT).show();
+        if((upp==null || upp.trim().length()==0 )&&(upp.equals(up))&&(upp.trim().length()>0)&&(upp.trim().length()<8)){
+            Toast.makeText(this,"verify password",Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(uf==null || uf.trim().length()==0 ){
+        if((uf==null || uf.trim().length()==0 )){
             Toast.makeText(this,"first name isrequired",Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -91,7 +91,7 @@ public class Signupp extends AppCompatActivity {
             Toast.makeText(this,"last name isrequired",Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(ue==null || ue.trim().length()==0 ){
+        if((ue==null || ue.trim().length()==0 )&&(ue.contains("@"))){
             Toast.makeText(this,"email isrequired",Toast.LENGTH_SHORT).show();
             return false;
         }

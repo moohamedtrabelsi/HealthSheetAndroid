@@ -25,7 +25,7 @@ static List<Visite>lv = new ArrayList<>();
         setContentView(R.layout.activity_medical_sheet);
 
         l= findViewById(R.id.lo);
-        r=l.findViewById(R.id.rcv);
+        r=l.findViewById(R.id.rcm);
 
         r.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
         //  v.setBackgroundResource(R.drawable.algerie);

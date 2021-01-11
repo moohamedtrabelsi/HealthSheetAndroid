@@ -7,10 +7,6 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.healthsheet.About;
-import com.example.healthsheet.Patient.Account1;
-import com.example.healthsheet.Patient.Menu;
-import com.example.healthsheet.Patient.doctorsList;
 import com.example.healthsheet.R;
 
 public class MenuDoct extends AppCompatActivity {
@@ -25,7 +21,7 @@ public class MenuDoct extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id =item.getItemId();
         if(id == R.id.AccountDoc){
-            Intent intent = new Intent(MenuDoct.this, AccountDoc.class);
+            Intent intent = new Intent(MenuDoct.this,AccountDoctor.class);
             startActivity(intent);
             return true ;
 

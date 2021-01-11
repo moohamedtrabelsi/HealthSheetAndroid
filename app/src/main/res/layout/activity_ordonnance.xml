@@ -6,33 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".Ordonnance">
 
+    <View
+        android:id="@+id/view9"
+        android:layout_width="408dp"
+        android:layout_height="181dp"
+        android:background="@drawable/hedhi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="406dp"
-        android:layout_height="426dp"
-        android:layout_marginTop="60dp"
+        android:id="@+id/imganalyse"
+        android:layout_width="400dp"
+        android:layout_height="371dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/c" />
+        app:layout_constraintTop_toBottomOf="@+id/view9" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="152dp"
         android:ems="10"
+        android:hint="analayse to treat"
         android:inputType="textPersonName"
-        android:text="Analyse a traiter"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAlignment="textStart"
+        android:textColor="@color/design_default_color_on_primary"
+        android:textColorHint="@color/design_default_color_background"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/view9"
+        app:layout_constraintTop_toTopOf="@+id/view9" />
 
     <Button
         android:id="@+id/creer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginBottom="88dp"
-        android:text="Creer une ordonnance"
+        android:layout_width="206dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="60dp"
+        android:background="#00A79B"
+        android:text="Prescription"
+        android:textColor="@color/design_default_color_background"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -72,7 +72,7 @@ public class EmailForgot extends AppCompatActivity {
     { String Sender="mohamed.trabelsi@esprit.tn";
         String Password="success1623";
         String Title="test";
-
+        UpdatePassword.email = email.getText().toString();
         String Message=Random();
         codee=Message;
         new Thread(new Runnable() {
